@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\CategoriaDataTable;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CategoriaController extends Controller
 {
@@ -28,7 +30,9 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request['user_id'] = auth()->user()->id;
+        $categoria = Categoria::create($request->all());
+        return Redirect::back();
     }
 
     /**
@@ -50,16 +54,18 @@ class CategoriaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Categoria $categoria)
     {
-        //
+        $categoria->update($request->all());
+        return Redirect::back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Categoria $categoria)
     {
-        //
+        $categoria->destroy();
+        return Redirect::back();
     }
 }
