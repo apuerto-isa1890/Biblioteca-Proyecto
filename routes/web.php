@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\EditorialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +21,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::resource('author', AuthorController::class);
 Route::resource('categoria', CategoriaController::class);
+Route::resource('editorial', EditorialController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

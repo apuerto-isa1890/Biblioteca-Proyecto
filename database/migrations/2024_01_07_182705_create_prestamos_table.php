@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('prestamos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('usuario_id');
+            $table->foreignId('recurso_id');
+            $table->dateTime('fecha_hora_prestamo');
+            $table->dateTime('fecha_hora_devolucion')->nullable();
+            $table->dateTime('fecha_hora_entrega')->nullable();
+            $table->string('motivo_prestamo');
+            $table->string('observaciones');
+            $table->string('estado');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

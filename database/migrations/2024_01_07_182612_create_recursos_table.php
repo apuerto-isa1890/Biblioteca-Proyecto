@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('recursos', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->foreignId('categoria_id');
+            $table->foreignId('author_id')->nullable();
+            $table->foreignId('editorial_id')->nullable();
             $table->timestamps();
         });
     }
