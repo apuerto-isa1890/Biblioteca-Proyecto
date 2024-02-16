@@ -73,7 +73,7 @@
         </nav>
 
         <main class="">
-            <div class="row bg-light">
+            <div class="row bg-light p-0 m-0">
                 @guest
                     <div class="col-12">
                         @yield('content')

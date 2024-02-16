@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-7 bg-primary align-items-center" style="height: 800px">
+        <div class="col-7 bg-primary align-items-center" style="height: 600px">
             <div class="container text-center">
-                <div class="row align-items-center" style="height: 800px">
+                <div class="row align-items-center" style="height: 600px">
                   <div class="col">
                     <h1 class="text-white fw-bold">SISTEMA DE GESTIÓN DE BIBLIOTECA</h1>
                   </div>
