@@ -19,13 +19,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
 Route::middleware('auth')->group(function() {
+    
+    Route::get('/', function () {
+        return view('welcome');
+    });
     Route::resource('author', AuthorController::class);
     Route::get('author/json/get', [AuthorController::class, 'json']);
 

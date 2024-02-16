@@ -38,6 +38,10 @@
                                 <option value="CCNN">CCNN</option>
                                 <option value="LITERATURA">LITERATURA</option>
                                 <option value="HISTORIA">HISTORIA</option>
+                                <option value="MATEMATICAS">MATEMATICAS</option>
+                                <option value="GEOGRAFIA">GEOGRAFIA</option>
+                                <option value="RELIGION">RELIGION</option>
+                                <option value="LENGUA EXTRANGERA">LENGUA EXTRANJERA</option>
                             </select>
                         </div>
                     </div>
