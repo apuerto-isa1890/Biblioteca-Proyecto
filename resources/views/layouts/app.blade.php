@@ -74,22 +74,29 @@
 
         <main class="">
             <div class="row bg-light">
+                @guest
+                    <div class="col-12">
+                        @yield('content')
+                    </div>
+                    
+                @else
                 <div class="col-2">
                     <div class="list-group rounded-0">
                         <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                          Adminstracion de prestamos
+                        Adminstracion de prestamos
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">Libros y recursos</a>
-                        <a href="#" class="list-group-item list-group-item-action">Editoriales</a>
-                        <a href="#" class="list-group-item list-group-item-action">Authores</a>
-                        <a href="#" class="list-group-item list-group-item-action">Usuarios</a>
-                        <a href="#" class="list-group-item list-group-item-action">Adminstracion de sistema</a>
-                        <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+                        <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action">Libros y recursos</a>
+                        <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action">Editoriales</a>
+                        <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action">Authores</a>
+                        <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action">Usuarios</a>
+                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action">Adminstracion de sistema</a>
+                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action disabled">A disabled link item</a>
                     </div>
                 </div>
                 <div class="col-10">
                     @yield('content')
                 </div>
+                @endguest
             </div>
         </main>
     </div>

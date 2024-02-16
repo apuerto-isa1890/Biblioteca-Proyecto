@@ -2,8 +2,9 @@
 
 namespace App\DataTables;
 
-use App\Models\Author;
+use App\Models\Prestamo;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
+use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
 use Yajra\DataTables\Html\Button;
@@ -11,8 +12,9 @@ use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
+use Yajra\DataTables\QueryDataTable;
 
-class AuthorsDataTable extends DataTable
+class PrestamosDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -22,16 +24,31 @@ class AuthorsDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'authors.action')
+            ->addColumn('action', 'prestamos.action')
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Author $model): QueryBuilder
+    public function query(Prestamo $model): QueryBuilder
     {
-        return $model->newQuery();
+        $query = $model->newQuery();
+        $query ->join('usuarios', 'usuarios.id', '=', 'prestamos.usuario_id')
+        ->join('recursos', 'recursos.id', '=', 'prestamos.recurso_id')
+        ->select('prestamos.id',
+                 'usuarios.nombres as usuario',
+                 'recursos.tipo',
+                 'recursos.titulo',
+                 'fecha_hora_prestamo',
+                 'fecha_hora_entrega',
+                 'fecha_hora_devolucion',
+                 'prestamos.created_at',
+                 'prestamos.updated_at'
+                );
+
+        return $query;
+      
     }
 
     /**
@@ -40,7 +57,7 @@ class AuthorsDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('authors-table')
+                    ->setTableId('prestamos-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -63,13 +80,15 @@ class AuthorsDataTable extends DataTable
     {
         return [
             Column::make('id')->title('ID'),
-            Column::make('nombres')->title('NOMBRES'),
-            Column::make('apellidos')->title('APELLIDOS'),
-            Column::make('sexo')->title('SEXO'),
-            Column::make('pais')->title('PAIS'),
-            Column::make('estado')->title('ESTADO'),
-            Column::make('created_at')->title('FECHA DE CREACION'),
-            Column::make('updated_at')->title('FECHA DE MODIFICACION'),
+            Column::make('usuario')->title('USUARIO'),
+            Column::make('tipo')->title('TIPO'),        
+            Column::make('recurso')->title('RECURSO'),   
+            Column::make('clasificacion')->title('CLASIFICACION'),       
+            Column::make('fecha_hora_prestamo')->title('FECHA HORA PRESTAMO'),     
+            Column::make('fecha_hora_entrega')->title('FECHA HORA ENTREGA'),     
+            Column::make('fecha_hora_devolucion')->title('FECHA HORA DEVOLUCION'),     
+            Column::make('created_at'),
+            Column::make('updated_at'),
         ];
     }
 
@@ -78,6 +97,6 @@ class AuthorsDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Authors_' . date('YmdHis');
+        return 'Prestamos_' . date('YmdHis');
     }
 }

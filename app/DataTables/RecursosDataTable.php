@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Author;
+use App\Models\Recurso;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class AuthorsDataTable extends DataTable
+class RecursosDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -22,14 +22,14 @@ class AuthorsDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'authors.action')
+            ->addColumn('action', 'recursos.action')
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Author $model): QueryBuilder
+    public function query(Recurso $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -40,7 +40,7 @@ class AuthorsDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('authors-table')
+                    ->setTableId('recursos-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -62,14 +62,15 @@ class AuthorsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->title('ID'),
-            Column::make('nombres')->title('NOMBRES'),
-            Column::make('apellidos')->title('APELLIDOS'),
-            Column::make('sexo')->title('SEXO'),
-            Column::make('pais')->title('PAIS'),
-            Column::make('estado')->title('ESTADO'),
-            Column::make('created_at')->title('FECHA DE CREACION'),
-            Column::make('updated_at')->title('FECHA DE MODIFICACION'),
+            Column::make('id'),
+            Column::make('titulo')->title('TITULO'),
+            Column::make('descripcion')->title('DESCRIPCION'),
+            Column::make('anyo')->title('AÑO'),
+            Column::make('inventario')->title('inventario'),
+            Column::make('isb')->title('ISB'),
+            Column::make('tipo')->title('TIPO'),
+            Column::make('created_at'),
+            Column::make('updated_at'),
         ];
     }
 
@@ -78,6 +79,6 @@ class AuthorsDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Authors_' . date('YmdHis');
+        return 'Recursos_' . date('YmdHis');
     }
 }

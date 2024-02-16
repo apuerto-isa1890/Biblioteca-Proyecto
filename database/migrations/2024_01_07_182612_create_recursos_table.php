@@ -16,8 +16,12 @@ return new class extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->foreignId('categoria_id');
+            $table->integer('inventario')->default(0);
             $table->foreignId('author_id')->nullable();
             $table->foreignId('editorial_id')->nullable();
+            $table->integer('anyo');
+            $table->string('isb')->nullable();
+            $table->string('tipo');
             $table->timestamps();
         });
     }

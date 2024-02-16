@@ -2,7 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Author;
+use App\Models\Usuario;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -12,7 +12,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class AuthorsDataTable extends DataTable
+class UsuariosDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -22,14 +22,13 @@ class AuthorsDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'authors.action')
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Author $model): QueryBuilder
+    public function query(Usuario $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -40,7 +39,7 @@ class AuthorsDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('authors-table')
+                    ->setTableId('usuarios-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
@@ -62,14 +61,15 @@ class AuthorsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->title('ID'),
+            Column::make('id'),
             Column::make('nombres')->title('NOMBRES'),
             Column::make('apellidos')->title('APELLIDOS'),
+            Column::make('identificacion')->title('IDENTIFICACION'),
+            Column::make('tipo')->title('TIPO'),
+            Column::make('fecha_nac')->title('FECHA NACIMIENTO'),
             Column::make('sexo')->title('SEXO'),
-            Column::make('pais')->title('PAIS'),
-            Column::make('estado')->title('ESTADO'),
-            Column::make('created_at')->title('FECHA DE CREACION'),
-            Column::make('updated_at')->title('FECHA DE MODIFICACION'),
+            Column::make('created_at')->title('FECHA CREACION'),
+            Column::make('updated_at')->title('FECHA MODIFICACION'),
         ];
     }
 
@@ -78,6 +78,6 @@ class AuthorsDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Authors_' . date('YmdHis');
+        return 'Usuarios_' . date('YmdHis');
     }
 }

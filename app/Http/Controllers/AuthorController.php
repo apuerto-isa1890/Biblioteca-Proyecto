@@ -28,9 +28,16 @@ class AuthorController extends Controller
 
     public function destroy(Author $author) {
         $author->update([
-            'estatus' => $author->estatus == 1 ? 0: 1
+            'estado' => $author->estado == 1 ? 0: 1
         ]);
         $author->save();
         return Redirect::back();
+    }
+
+
+    public function json() {
+        $autors = Author::where('estado', true)->get();
+
+        return response()->json($autors);
     }
 }

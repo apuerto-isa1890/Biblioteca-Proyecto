@@ -35,4 +35,10 @@ class EditorialController extends Controller
         $editorial->save();
         return Redirect::back();
     }
+
+    public function json() {
+        $editorial = Editorial::where('estatus', true)->get();
+
+        return response()->json($editorial);
+    }
 }

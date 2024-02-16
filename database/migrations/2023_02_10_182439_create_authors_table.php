@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('apellidos');
             $table->string('sexo');
             $table->string('pais');
+            $table->boolean('estado')->default(true);
             $table->timestamps();
         });
     }

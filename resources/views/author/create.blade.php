@@ -15,22 +15,18 @@
                       <input type="text" class="form-control" id="nombre-nombre" name="nombres" required>
                   </div>
                   <div class="mb-3">
-                      <label for="descripcion-telefono" class="form-label">Telefono <span class="text-danger">*</span></label>
+                      <label for="descripcion-telefono" class="form-label">Apellidos <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="descripcion-telefono" name="apellidos" required>
                   </div>
                   <div class="mb-3">
-                    <label for="descripcion-direccion" class="form-label">Direccion <span class="text-danger">*</span></label>
+                    <label for="descripcion-direccion" class="form-label">Sexo <span class="text-danger">*</span></label>
                     <select class="form-control" name="sexo">
                         <option value="Hombre" selected>Hombre </option>
                         <option value="Mujer" selected>Mujer </option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="descripcion-direccion" class="form-label">Pais <span class="text-danger">*</span></label>
-                    <select class="form-control" name="pais">
-                        <option value="Hombre" selected>Hombre </option>
-                        <option value="Mujer" selected>Mujer </option>
-                    </select>
+                    @include('author.paises')
                 </div>
               
           </div>
