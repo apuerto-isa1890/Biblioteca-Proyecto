@@ -93,6 +93,11 @@
                             </span>
                            
                         </a>
+                        <a href="{{ route('categoria.index') }}" class="list-group-item list-group-item-action p-4" id="categoria">
+                            <span>
+                                <h5>Categorias</h5>
+                            </span>            
+                        </a>
                         <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action p-4" id="editorial">
                             <span>
                                 <h5>Editoriales</h5>

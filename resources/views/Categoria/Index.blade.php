@@ -26,3 +26,12 @@
         @push('scripts')
         {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
         @endpush
+
+        <script>
+            
+    function rellanarActive() {
+        let el = document.getElementById('categoria');
+        el.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', rellanarActive);
+        </script>
