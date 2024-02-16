@@ -73,4 +73,11 @@
         }
         return data;
     }
+
+    function rellanarActive() {
+        let el = document.getElementById('editorial');
+        el.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', rellanarActive);
+
 </script>

@@ -42,7 +42,7 @@ class EditorialsDataTable extends DataTable
         return $this->builder()
                     ->setTableId('editorials-table')
                     ->columns($this->getColumns())
-                    
+                    ->scrollerRowHeight(500)
                     ->minifiedAjax()
                     //->dom('Bfrtip')
                     ->orderBy(1)

@@ -39,7 +39,7 @@ class UsuarioController extends Controller
     public function update(Usuario $usuario, Request $request)
     {
         $usuario->update($request->all());
-        Redirect::back();
+        return Redirect::back();
     }
 
    

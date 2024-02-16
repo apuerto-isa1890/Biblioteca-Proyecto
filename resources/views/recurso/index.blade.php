@@ -80,5 +80,11 @@
         return data;
     }
 
+    function rellanarActive() {
+        let el = document.getElementById('libro');
+        el.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', rellanarActive);
+
     
 </script>

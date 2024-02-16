@@ -80,20 +80,45 @@
                     </div>
                     
                 @else
-                <div class="col-2">
+                <div class="col-2 border-end p-0" style="min-height: 900px">
                     <div class="list-group rounded-0">
-                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        Adminstracion de prestamos
+                        <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="prestamo">
+                            <span>
+                                <h5>Adminstracion de prestamos</h5>
+                            </span>
                         </a>
-                        <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action">Libros y recursos</a>
-                        <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action">Editoriales</a>
-                        <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action">Authores</a>
-                        <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action">Usuarios</a>
-                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action">Adminstracion de sistema</a>
-                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action disabled">A disabled link item</a>
+                        <a href="{{ route('recurso.index') }}" class="list-group-item list-group-item-action p-4" id="libro">
+                            <span>
+                                <h5> Libros y recursos</h5>
+                            </span>
+                           
+                        </a>
+                        <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action p-4" id="editorial">
+                            <span>
+                                <h5>Editoriales</h5>
+                            </span>            
+                        </a>
+                        <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action p-4" id="author">
+                            <span>
+                                <h5>Authores</h5>
+                            </span>
+                        </a>
+                        <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action p-4" id="usuario-menu">
+                            <span>
+                                <i class="fa-solid fa-user"></i>
+                                <h5>Usuarios</h5>
+                            </span>
+                        </a>
+                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action p-4">
+                            <span>
+                                <h5>
+                                    Administracion de sistema
+                                </h5>
+                            </span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-10 p-4">
                     @yield('content')
                 </div>
                 @endguest

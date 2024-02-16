@@ -68,4 +68,10 @@
 
         return data;
     }
+
+    function rellanarActive() {
+        let el = document.getElementById('prestamo');
+        el.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', rellanarActive);
 </script>

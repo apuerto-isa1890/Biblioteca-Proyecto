@@ -59,6 +59,7 @@ class RecursoController extends Controller
         $recurso->update($request->all());
         $recurso->save();
         return Redirect::back();
+        
     }
 
     /**

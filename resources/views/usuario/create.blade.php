@@ -12,7 +12,7 @@
              
                   <div class="mb-3">
                       <label for="estudiante-nombres" class="form-label">Nombres <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="estudiantes-nombres" name="nombres" required>
+                      <input type="text" class="form-control" id="estudiante-nombres" name="nombres" required>
                   </div>
                   <div class="mb-3">
                       <label for="estudiante-apellidos" class="form-label">Apellidos <span class="text-danger">*</span></label>

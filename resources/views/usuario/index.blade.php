@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">Adminstracion de editoriales<div>
+        <div class="card-header">Administracion de usuarios<div>
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                         <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#crearEditorial"> Agregar</button>
@@ -45,7 +45,7 @@
        form.action = '/usuario/' + data.id;
        
        Object.keys(data).forEach(x => {
-            document.getElementById('estudiante-' + x).value = data[x];
+            document.getElementById('estudiantes-' + x).value = data[x];
        })
 
     }
@@ -77,4 +77,10 @@
         }
         return data;
     }
+
+    function rellanarActive() {
+        let el = document.getElementById('usuario-menu');
+        el.classList.add('active');
+    }
+    document.addEventListener('DOMContentLoaded', rellanarActive);
 </script>
