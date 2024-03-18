@@ -84,7 +84,6 @@
 
     function rellanarActive() {
         let el = document.getElementById('author');
-
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);

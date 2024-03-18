@@ -82,6 +82,11 @@
                 @else
                 <div class="col-2 border-end p-0" style="min-height: 900px">
                     <div class="list-group rounded-0">
+                        <a href="{{ route('dashboard.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="dashboard">
+                            <span>
+                                <h5>Dashboard</h5>
+                            </span>
+                        </a>
                         <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="prestamo">
                             <span>
                                 <h5>Adminstracion de prestamos</h5>

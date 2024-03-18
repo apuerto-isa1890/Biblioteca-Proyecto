@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditorialController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\RecursoController;
@@ -27,6 +28,12 @@ Route::middleware('auth')->group(function() {
     Route::get('/', function () {
         return redirect('prestamo');
     });
+
+    Route::resource('dashboard', DashboardController::class);
+
+    Route::get('dashboard/prestamo/{inicio}/{fin}', [DashboardController::class, 'prestamos']);
+    Route::get('dashboard/usuario/global', [DashboardController::class, 'usuario_prestamo']);
+    Route::get('dashboard/usuario/libro/{usuario}', [DashboardController::class, 'usuario_prestamo_libro']);
     Route::resource('author', AuthorController::class);
     Route::get('author/json/get', [AuthorController::class, 'json']);
 
