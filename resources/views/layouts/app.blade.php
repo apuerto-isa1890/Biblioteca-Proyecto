@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+   
+    <meta name="_token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -119,7 +120,7 @@
                                 <h5>Usuarios</h5>
                             </span>
                         </a>
-                        <a href="{{ route('logout') }}" class="list-group-item list-group-item-action p-4">
+                        <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4">
                             <span>
                                 <h5>
                                     Administracion de sistema

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdministracionController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BackupController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditorialController;
@@ -30,8 +32,11 @@ Route::middleware('auth')->group(function() {
     });
 
     Route::resource('dashboard', DashboardController::class);
-
+    Route::resource('admin', AdministracionController::class);
     Route::get('dashboard/prestamo/{inicio}/{fin}', [DashboardController::class, 'prestamos']);
+    Route::get('backup/json', [BackupController::class, 'json']);
+    Route::get('backup/restaurar/{file}', [BackupController::class, 'restore']);
+    Route::get('backup', [BackupController::class, 'index'])->name('backup.index');
     Route::get('dashboard/usuario/global', [DashboardController::class, 'usuario_prestamo']);
     Route::get('dashboard/usuario/libro/{usuario}', [DashboardController::class, 'usuario_prestamo_libro']);
     Route::resource('author', AuthorController::class);
