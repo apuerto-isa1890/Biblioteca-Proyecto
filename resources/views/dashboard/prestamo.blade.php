@@ -49,12 +49,21 @@
     function iniciarBusqueda() {
         document.getElementById('inicio').value = '2024-01-01';
         document.getElementById('fin').value = '2024-12-31';
+
+        let el = document.getElementById('dashboard');
+        el.classList.add('active');
+
+        
         buscar();
+
     }
 
     function buscar() {
         var url = "/dashboard/prestamo/" + document.getElementById('inicio').value + '/' + document.getElementById('fin').value ;
         
+
+      
+
         fetch(url, {
         method: "GET", // or 'PUT'
         //body: JSON.stringify(data), // data can be `string` or {object}!
@@ -83,7 +92,7 @@
                 <td>${element.usuario}</td>
                 <td>${element.fecha_hora_prestamo}</td>
                 <td>${element.fecha_hora_entrega}</td>
-                <td>${ new Date() - new Date(element.fecha_hora_entrega)}</td>
+                <td>${element.diif_dias}</td>
             </tr>
             
             `

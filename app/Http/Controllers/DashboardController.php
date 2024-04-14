@@ -42,8 +42,10 @@ class DashboardController extends Controller
                  'fecha_hora_prestamo',
                  'fecha_hora_entrega',
                  'fecha_hora_devolucion',
+                
                  'prestamos.created_at',
-                 'prestamos.updated_at'
+                 'prestamos.updated_at',
+                DB::raw('DATEDIFF(CURDATE(), fecha_hora_entrega) as diif_dias')
                 );
 
         return $query->get();

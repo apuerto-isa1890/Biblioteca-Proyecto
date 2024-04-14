@@ -59,6 +59,11 @@
     }
 
     function obtenerBackup() {
+
+        let el = document.getElementById('admin-system');
+        el.classList.add('active');
+
+
         var url = "/backup/json";      
         fetch(url, {
             method: "GET", // or 'PUT'
@@ -87,9 +92,7 @@
                 <td>${element.size}</td>
                 <td>${element.last_modified}</td>
                 <td><button onclick="restaurarBases('${element.name}')" class="btn btn-primary">
-                        <div class="spinner-border text-white" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
+                      
                         Restaurar
                     </button>
                 </td>

@@ -83,13 +83,15 @@
 <script>
     function cargarTodo()
     {
+    
         iniciarBusqueda();
         iniciarBusquedaUsuario()
-        rellanarActive()
+        rellanarActiveD()
     }
 
-    function rellanarActive() {
-        let el = document.getElementById('dashboard');
+    function rellanarActiveD() {
+      
+        let el = document.getElementById('admin-sys');
         el.classList.add('active');
     }
 

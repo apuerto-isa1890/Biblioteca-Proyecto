@@ -120,7 +120,7 @@
                                 <h5>Usuarios</h5>
                             </span>
                         </a>
-                        <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4">
+                        <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4" id="admin-system">
                             <span>
                                 <h5>
                                     Administracion de sistema
