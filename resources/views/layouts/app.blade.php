@@ -123,7 +123,14 @@
                         <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4" id="admin-system">
                             <span>
                                 <h5>
-                                    Administracion de sistema
+                                    Administracion de datos
+                                </h5>
+                            </span>
+                        </a>
+                        <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action p-4" id="admin-system">
+                            <span>
+                                <h5>
+                                    Administracion de permisos de usuario
                                 </h5>
                             </span>
                         </a>

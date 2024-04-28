@@ -6,8 +6,10 @@ use App\Http\Controllers\BackupController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\PermisosController;
 use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\RecursoController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +58,11 @@ Route::middleware('auth')->group(function() {
 
     Route::resource('prestamo', PrestamoController::class);
     Route::put('prestamo/devolucion/{id}', [PrestamoController::class, 'devolucion']);
+
+    Route::get('permisos/{usuario}', [PermisosController::class, 'index']);
+    Route::post('permisos/{usuario}', [PermisosController::class, 'store']);
+
+    Route::get('user/admin', [UserController::class, 'index'])->name('user.index');
 });
 
 

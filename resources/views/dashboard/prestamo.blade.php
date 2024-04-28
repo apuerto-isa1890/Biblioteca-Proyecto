@@ -61,9 +61,6 @@
     function buscar() {
         var url = "/dashboard/prestamo/" + document.getElementById('inicio').value + '/' + document.getElementById('fin').value ;
         
-
-      
-
         fetch(url, {
         method: "GET", // or 'PUT'
         //body: JSON.stringify(data), // data can be `string` or {object}!

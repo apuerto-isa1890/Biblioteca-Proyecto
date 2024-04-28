@@ -9,6 +9,7 @@
                         <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#crearEditorial"> Agregar</button>
                         <button type="button" class="btn btn-warning m-2" onclick="editar()" data-bs-toggle="modal" data-bs-target="#editarEditorial">Editar</button>
                        
+                       
                        <!-- <button type="button" class="btn btn-danger  m-2" onclick="eliminar()" data-bs-toggle="modal" data-bs-target="#eliminarEditorial">Anular/Activar</button> -->
 
                     </div>
@@ -32,12 +33,19 @@
     @include('usuario.eliminar')
 </div>
 
+<div class="modal modal-lg fade" id="administrarPermisos" tabindex="-1" aria-labelledby="administrarPermisos" aria-hidden="true">
+    @include('usuario.permisos')
+</div>
+
+
+
 @endsection
 @push('scripts')
     {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
 @endpush
 
 <script>
+
     function editar() {
        let data = obtenerFilaSeleccionada();
 
