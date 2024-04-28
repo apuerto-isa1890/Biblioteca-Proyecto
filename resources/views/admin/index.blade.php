@@ -44,7 +44,7 @@
     }
 
     function rellanarActive() {
-        let el = document.getElementById('dashboard');
+        let el = document.getElementById('administrar dashboard');
         el.classList.add('active');
     }
 

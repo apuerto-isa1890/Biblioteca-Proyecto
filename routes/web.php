@@ -63,6 +63,7 @@ Route::middleware('auth')->group(function() {
     Route::post('permisos/{usuario}', [PermisosController::class, 'store']);
 
     Route::get('user/admin', [UserController::class, 'index'])->name('user.index');
+    Route::get('user/permisos/', [UserController::class, 'permisos'])->name('user.permisos');
 });
 
 

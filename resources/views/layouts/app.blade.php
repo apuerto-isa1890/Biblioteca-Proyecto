@@ -83,51 +83,50 @@
                 @else
                 <div class="col-2 border-end p-0" style="min-height: 900px">
                     <div class="list-group rounded-0">
-                        <a href="{{ route('dashboard.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="dashboard">
+                        <a href="{{ route('dashboard.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="administrar dashboard ">
                             <span>
                                 <h5>Dashboard</h5>
                             </span>
                         </a>
-                        <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="prestamo">
+                        <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="administrar prestamo">
                             <span>
                                 <h5>Adminstracion de prestamos</h5>
                             </span>
                         </a>
-                        <a href="{{ route('recurso.index') }}" class="list-group-item list-group-item-action p-4" id="libro">
+                        <a href="{{ route('recurso.index') }}" class="list-group-item list-group-item-action p-4" id="administrar recursos">
                             <span>
                                 <h5> Libros y recursos</h5>
-                            </span>
-                           
-                        </a>
-                        <a href="{{ route('categoria.index') }}" class="list-group-item list-group-item-action p-4" id="categoria">
+                            </span>                     
+                        </a> 
+                        <a href="{{ route('categoria.index') }}" class="list-group-item list-group-item-action p-4" id="administrar categoria">
                             <span>
                                 <h5>Categorias</h5>
                             </span>            
                         </a>
-                        <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action p-4" id="editorial">
+                        <a href="{{ route('editorial.index') }}" class="list-group-item list-group-item-action p-4" id="administrar editorial">
                             <span>
                                 <h5>Editoriales</h5>
                             </span>            
                         </a>
-                        <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action p-4" id="author">
+                        <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action p-4" id="administrar author">
                             <span>
                                 <h5>Authores</h5>
                             </span>
                         </a>
-                        <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action p-4" id="usuario-menu">
+                        <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action p-4" id="administrar usuario-menu">
                             <span>
                                 <i class="fa-solid fa-user"></i>
                                 <h5>Usuarios</h5>
                             </span>
                         </a>
-                        <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4" id="admin-system">
+                        <a href="{{ route('admin.index') }}" class="list-group-item list-group-item-action p-4" id="administrar admin-system">
                             <span>
                                 <h5>
                                     Administracion de datos
                                 </h5>
                             </span>
                         </a>
-                        <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action p-4" id="admin-system">
+                        <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action p-4" id="administrar admin-permisos">
                             <span>
                                 <h5>
                                     Administracion de permisos de usuario
@@ -144,5 +143,31 @@
         </main>
     </div>
     @stack('scripts')
+    <script>
+
+        function buscarPermisos()
+        {
+            let url = "{{ route('user.permisos') }}";
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let permisos = data;
+                let menu = document.querySelectorAll('.list-group-item');
+
+                console.log(menu);
+                menu.forEach(element => {
+                    let id = element.id;
+                    console.log(id);    
+                    if(permisos.some(x => x.name.includes(id)))
+                    {
+                        element.style.display = 'block';
+                    }else{
+                        element.style.display = 'none';
+                    }
+                });
+            });
+        }
+        document.addEventListener('DOMContentLoaded', buscarPermisos);
+    </script>
 </body>
 </html>
