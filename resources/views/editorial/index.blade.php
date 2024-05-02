@@ -75,7 +75,7 @@
     }
 
     function rellanarActive() {
-        let el = document.getElementById('editorial');
+        let el = document.getElementById('administrar editorial');
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);

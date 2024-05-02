@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
-          <div class="card h-100">
+          <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
             <div class="card-header bg-white">
                 <h4 class="fw-bold text-center">Total libros inventario</h4>
             </div>
@@ -15,7 +15,7 @@
         </div>
       
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
               <div class="card-header bg-white">
                   <h4 class="fw-bold text-center">Total libros prestados</h4>
               </div>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
               <div class="card-header bg-white">
                   <h4 class="fw-bold text-center">Prestamos vencidos</h4>
               </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
               <div class="card-header bg-white">
                   <h4 class="fw-bold text-center">Libros sin existencias</h4>
               </div>
@@ -46,9 +46,9 @@
         </div>   
       </div>
 
-      <div class="row mt-4">
+      <div class="row mt-4 pt-4">
         <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
               <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
                 <h5 class="fw-bold">Reportes prestamos</h5>
               </button>
@@ -91,7 +91,7 @@
 
     function rellanarActiveD() {
       
-        let el = document.getElementById('admin-sys');
+        let el = document.getElementById('administrar dashboard');
         el.classList.add('active');
     }
 

@@ -60,7 +60,7 @@
 
     function obtenerBackup() {
 
-        let el = document.getElementById('admin-system');
+        let el = document.getElementById('administrar admin-system');
         el.classList.add('active');
 
 

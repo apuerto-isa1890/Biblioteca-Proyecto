@@ -8,14 +8,7 @@
               <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
                 <h5 class="fw-bold">Adminstracion de bases de datos</h5>
               </button>
-              <!--
-              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                <h5 class="fw-bold">Reportes libros</h5>
-              </button> -->
-              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                <h5 class="fw-bold">Roles y Usuarios</h5>
-              </button>
-            
+             
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -44,7 +37,7 @@
     }
 
     function rellanarActive() {
-        let el = document.getElementById('administrar dashboard');
+        let el = document.getElementById('administrar admin-system');
         el.classList.add('active');
     }
 

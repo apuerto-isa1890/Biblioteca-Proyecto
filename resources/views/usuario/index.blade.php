@@ -87,7 +87,7 @@
     }
 
     function rellanarActive() {
-        let el = document.getElementById('usuario-menu');
+        let el = document.getElementById('administrar usuario-menu');
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);

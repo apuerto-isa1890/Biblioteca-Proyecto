@@ -83,7 +83,7 @@
 
 
     function rellanarActive() {
-        let el = document.getElementById('author');
+        let el = document.getElementById('administrar author');
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);

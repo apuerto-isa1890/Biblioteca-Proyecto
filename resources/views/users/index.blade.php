@@ -33,6 +33,11 @@
         let data = obtenerFilaSeleccionadaUsr();
         obtenerPermisos(data.id);
     }
+
+    function rellanarActiveUrs() {
+        let el = document.getElementById('administrar admin-permisos');
+        el.classList.add('active');
+    }
     
     function obtenerFilaSeleccionadaUsr() {
         let items = document.getElementsByClassName('odd selected');
@@ -54,6 +59,6 @@
         let el = document.getElementById('editorial');
         el.classList.add('active');
     }
-    document.addEventListener('DOMContentLoaded', rellanarActive);
+    document.addEventListener('DOMContentLoaded', rellanarActiveUrs);
 
 </script>

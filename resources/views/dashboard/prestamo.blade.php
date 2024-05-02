@@ -50,7 +50,7 @@
         document.getElementById('inicio').value = '2024-01-01';
         document.getElementById('fin').value = '2024-12-31';
 
-        let el = document.getElementById('dashboard');
+        let el = document.getElementById('administrar dashboard');
         el.classList.add('active');
 
         

@@ -70,7 +70,7 @@
     }
 
     function rellanarActive() {
-        let el = document.getElementById('prestamo');
+        let el = document.getElementById('administrar prestamo');
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);

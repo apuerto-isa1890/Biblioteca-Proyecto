@@ -30,7 +30,7 @@
         <script>
             
     function rellanarActive() {
-        let el = document.getElementById('categoria');
+        let el = document.getElementById('administrar categoria');
         el.classList.add('active');
     }
     document.addEventListener('DOMContentLoaded', rellanarActive);
