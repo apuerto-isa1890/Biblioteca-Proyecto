@@ -84,12 +84,12 @@
         var html = '';
         data.forEach(element => {
             html += `
-            <tr>
+            <tr clas="mt-4 mb-4">
                 <th scope="row">${element.titulo}</th>
                 <td>${element.usuario}</td>
                 <td>${element.fecha_hora_prestamo}</td>
                 <td>${element.fecha_hora_entrega}</td>
-                <td>${element.diif_dias}</td>
+                <td>${element.diif_dias >= 0 ? '<span class="badge text-bg-danger">' + element.diif_dias + '</span>'  : '<span class="badge text-bg-primary">En tiempo</span>'}</td>
             </tr>
             
             `

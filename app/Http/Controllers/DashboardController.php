@@ -17,7 +17,7 @@ class DashboardController extends Controller
     public function index()
     {
         $libros = Recurso::all();
-        $prestamos = $this->prestamos('2024-01-01', '2024-03-17');
+        $prestamos = $this->prestamos('2024-01-01', '2024-12-31');
         $data = [
             'libros' => count($libros),
             'prestamos' => count($prestamos),
@@ -55,7 +55,7 @@ class DashboardController extends Controller
         $query = Prestamo::query();
         $query ->join('usuarios', 'usuarios.id', '=', 'prestamos.usuario_id')
         ->join('recursos', 'recursos.id', '=', 'prestamos.recurso_id')
-        ->where('fecha_hora_entrega', '>',  Carbon::now())
+        ->where('fecha_hora_entrega', '<',  Carbon::now())
         ->select('prestamos.id',
                  'usuarios.nombres as usuario',
                  'recursos.tipo',
