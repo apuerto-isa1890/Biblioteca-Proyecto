@@ -61,6 +61,9 @@
         let items = document.getElementsByClassName('odd selected');
     
         if (items.length == 0) {
+            items = document.getElementsByClassName('even selected');
+        }
+        if (items.length == 0) {
             alert('Debes seleccionar una fila');
             return false;
         }

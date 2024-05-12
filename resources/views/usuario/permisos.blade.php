@@ -54,16 +54,15 @@
             method: metodo,
         }).then(response => response.json())
         .then(data => {
-            console.log(data);
+           
             let permisos = data.permisos;
             let permisosUsuario = data.usuarioPermisos;
 
             let permisosUsuarioArray = permisosUsuario.map(x => x.id);
-
-            console.log(permisosUsuarioArray )
+           
             let html = '';
             permisos.forEach(x => {
-                console.log(permisosUsuarioArray.includes(x.id))
+                
                 html += `
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="${x.name}" id="flexCheckDefault" ${permisosUsuarioArray.includes(x.id) ? 'checked' : ''}>

@@ -158,11 +158,8 @@
             .then(data => {
                 let permisos = data;
                 let menu = document.querySelectorAll('.list-group-item');
-
-                console.log(menu);
                 menu.forEach(element => {
                     let id = element.id;
-                    console.log(id);    
                     if(permisos.some(x => x.name.includes(id)))
                     {
                         element.style.display = 'block';

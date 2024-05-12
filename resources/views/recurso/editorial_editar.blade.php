@@ -18,7 +18,6 @@
         select.appendChild(option);
       });
 
-      console.log(select);
     } catch (error) {
       console.error('Error fetching country data:', error);
     }

@@ -17,8 +17,6 @@
         option.text = categoria.nombres + ' ' + categoria.apellidos;
         select.appendChild(option);
       });
-
-      console.log(select);
     } catch (error) {
       console.error('Error fetching country data:', error);
     }

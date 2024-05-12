@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">Adminstracion de editoriales<div>
+        <div class="card-header">Adminstracion de prestamo<div>
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                         <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#crearEditorial"> Agregar</button>
@@ -57,6 +57,10 @@
     function obtenerFilaSeleccionada() {
         let items = document.getElementsByClassName('selected');
     
+        if (items.length == 0) {
+            items = document.getElementsByClassName('even selected');
+        }
+
         if (items.length == 0) {
             alert('Debes seleccionar una fila');
             return false;

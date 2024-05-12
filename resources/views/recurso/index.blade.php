@@ -45,7 +45,6 @@
        form.action = '/recurso/' + data.id;
        
        Object.keys(data).forEach(x => {
-            console.log(data[x]);
             document.getElementById('recursos-' + x).value = data[x];
        })
 

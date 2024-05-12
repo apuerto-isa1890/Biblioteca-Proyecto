@@ -77,7 +77,6 @@
 
 
     function llenarTableT(data) {
-        console.log(data);
         document.getElementById('p-encontrados').innerHTML = data.length
         var el = document.getElementById('t-prestamo-d');
         el.innerHTML = '';
@@ -94,9 +93,6 @@
             
             `
         });
-
-        console.log(html);
-
         el.innerHTML = html;
     }
 </script>
