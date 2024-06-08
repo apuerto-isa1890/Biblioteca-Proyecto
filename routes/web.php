@@ -30,7 +30,7 @@ Auth::routes();
 Route::middleware('auth')->group(function() {
     
     Route::get('/', function () {
-        return redirect('prestamo');
+        return redirect('dashboard');
     });
 
     Route::resource('dashboard', DashboardController::class);
