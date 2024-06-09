@@ -23,15 +23,19 @@ class CategoriaController extends Controller
         $categoria = Categoria::create($request->all());
         return Redirect::back();
     }
-    public function update(Request $request, Categoria $categoria)
+    public function update(int $id, Request $request)
     {
+        error_log($id);
+
+        $categoria = Categoria::find($id);
         $categoria->update($request->all());
         return Redirect::back();
     }
 
-    public function destroy(Categoria $categoria)
+    public function destroy(int $id)
     {
-        $categoria->destroy();
+        $categoria = Categoria::find($id);
+        $categoria->delete();
         return Redirect::back();
     }
 
