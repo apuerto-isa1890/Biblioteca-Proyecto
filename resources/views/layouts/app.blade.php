@@ -15,7 +15,18 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+        .select2-container {
+       z-index: 99999;
+}
+        .select2-search__field {
+            z-index: 999999;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -147,9 +158,11 @@
             </div>
         </main>
     </div>
-    @stack('scripts')
-    <script>
 
+    @stack('scripts')
+ 
+    <script>
+        $('.js-example-basic-single').select2();
         function buscarPermisos()
         {
             let url = "{{ route('user.permisos') }}";
@@ -171,5 +184,7 @@
         }
         document.addEventListener('DOMContentLoaded', buscarPermisos);
     </script>
+  
+    
 </body>
 </html>

@@ -11,7 +11,7 @@
      </div>
      <div class="col">
          <div class="d-flex flex-row-reverse">
-        
+              
            </div>
      </div>
     </div>
@@ -34,6 +34,30 @@
  </div>
 
  <script>
+
+    function crearBackup() {
+        var url = "/backup";      
+        fetch(url, {
+            method: "GET", 
+            headers: {
+                "Content-Type": "application/json",
+                //'X-CSRF-Token': $('meta[name="_token"]').attr('content')
+            },
+          
+            })
+            .then((res) => {
+                res.json();
+                return false;
+            })
+            .catch((error) => console.error("Error:", error))
+            .then((response) => {
+                document.getElementById('alerta').style.display = 'block'
+                return false;
+            });
+
+        return false;
+    }
+
     function restaurarBases(ruta) {
         var archivo = String(ruta).split("/")[1];
         var url = "/backup/restaurar/" + archivo;      

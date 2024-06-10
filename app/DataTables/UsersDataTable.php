@@ -29,7 +29,8 @@ class UsersDataTable extends DataTable
      */
     public function query(User $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+        ->select('id', 'name', 'email');
     }
 
     /**
@@ -65,8 +66,8 @@ class UsersDataTable extends DataTable
             Column::make('id'),
             Column::make('name'),
             Column::make('email'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            //Column::make('created_at'),
+            //Column::make('updated_at'),
         ];
     }
 

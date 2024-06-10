@@ -14,7 +14,7 @@
       autores.forEach(author => {
         const option = document.createElement('option');
         option.value = author.id;
-        option.text = author.nombres + author.apellidos;
+        option.text = author.nombres +  ' ' + author.apellidos;
         select.appendChild(option);
       });
     } catch (error) {

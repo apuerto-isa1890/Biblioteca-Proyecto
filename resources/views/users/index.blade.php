@@ -40,12 +40,13 @@
     }
     
     function obtenerFilaSeleccionadaUsr() {
-        let items = document.getElementsByClassName('odd selected');
+        let items = document.getElementsByClassName('selected');
     
         if (items.length == 0) {
             alert('Debes seleccionar una fila');
             return false;
         }
+       
            
         let data = {
             id: items[0].cells[0].innerText,

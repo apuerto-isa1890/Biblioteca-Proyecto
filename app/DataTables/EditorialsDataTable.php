@@ -31,7 +31,8 @@ class EditorialsDataTable extends DataTable
      */
     public function query(Editorial $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+                     ->select('id', 'nombre', 'telefono', 'direccion', 'estatus');
     }
 
     /**
@@ -68,8 +69,8 @@ class EditorialsDataTable extends DataTable
             Column::make('telefono')->title('TELEFONO'),
             Column::make('direccion')->title('DIRECCION'),
             Column::make('estatus')->title('ESTADO'),
-            Column::make('created_at')->title('FECHA CREACION'),
-            Column::make('updated_at')->title('FECHA ACTUALIZACION'),
+            //Column::make('created_at')->title('FECHA CREACION'),
+            //Column::make('updated_at')->title('FECHA ACTUALIZACION'),
         ];
     }
 

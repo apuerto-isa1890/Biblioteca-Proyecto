@@ -30,7 +30,8 @@ class UsuariosDataTable extends DataTable
      */
     public function query(Usuario $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+            ->select('id', 'nombres', 'apellidos', 'identificacion', 'tipo', 'fecha_nac', 'sexo');
     }
 
     /**
@@ -68,8 +69,8 @@ class UsuariosDataTable extends DataTable
             Column::make('tipo')->title('TIPO'),
             Column::make('fecha_nac')->title('FECHA NACIMIENTO'),
             Column::make('sexo')->title('SEXO'),
-            Column::make('created_at')->title('FECHA CREACION'),
-            Column::make('updated_at')->title('FECHA MODIFICACION'),
+            //Column::make('created_at')->title('FECHA CREACION'),
+            //Column::make('updated_at')->title('FECHA MODIFICACION'),
         ];
     }
 
