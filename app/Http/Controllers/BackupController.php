@@ -16,9 +16,22 @@ class BackupController extends Controller
 {
 
     public function index() {
-        Artisan::call('backup:run');
+        try {
+            Artisan::call('backup:run --only-db');
+            $output = Artisan::output();
 
-        return Redirect::back();
+            error_log($output);
+
+            // Retorna una respuesta a la vista, por ejemplo
+            return response()->json([
+                'message' => 'Backup completed successfully',
+                'output' => $output
+            ]);
+
+        } catch (Exception $e) {
+            return response()->json($e->getMessage());
+        }
+    
     }
     public function json() {
         $backups = Storage::disk('local')->allFiles('SISTEMA DE GESTION DE BIBLIOTECA');

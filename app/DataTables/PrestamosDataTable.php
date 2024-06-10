@@ -44,8 +44,8 @@ class PrestamosDataTable extends DataTable
                  'fecha_hora_prestamo',
                  'fecha_hora_entrega',
                  'fecha_hora_devolucion',
-                 'prestamos.created_at',
-                 'prestamos.updated_at'
+                 //'prestamos.created_at',
+                 //'prestamos.updated_at'
                 );
 
         return $query;
@@ -88,8 +88,7 @@ class PrestamosDataTable extends DataTable
             Column::make('fecha_hora_prestamo')->title('FECHA HORA PRESTAMO'),     
             Column::make('fecha_hora_entrega')->title('FECHA HORA ENTREGA'),     
             Column::make('fecha_hora_devolucion')->title('FECHA HORA DEVOLUCION'),     
-            Column::make('created_at'),
-            Column::make('updated_at'),
+           
         ];
     }
 

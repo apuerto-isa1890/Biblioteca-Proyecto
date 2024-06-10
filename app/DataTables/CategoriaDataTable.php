@@ -32,7 +32,8 @@ class CategoriaDataTable extends DataTable
      */
     public function query(Categoria $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+                     ->select('id', 'name', 'description');
     }
 
     /**
@@ -71,8 +72,8 @@ class CategoriaDataTable extends DataTable
             Column::make('id'),
             Column::make('name')->width(200),
             Column::make('description')->width(850),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            //Column::make('created_at'),
+           // Column::make('updated_at'),
         ];
     }
 

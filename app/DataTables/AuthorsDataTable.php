@@ -31,7 +31,8 @@ class AuthorsDataTable extends DataTable
      */
     public function query(Author $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+                     ->select('id', 'nombres', 'apellidos', 'sexo', 'pais', 'estado');
     }
 
     /**
@@ -68,8 +69,8 @@ class AuthorsDataTable extends DataTable
             Column::make('sexo')->title('SEXO'),
             Column::make('pais')->title('PAIS'),
             Column::make('estado')->title('ESTADO'),
-            Column::make('created_at')->title('FECHA DE CREACION'),
-            Column::make('updated_at')->title('FECHA DE MODIFICACION'),
+            //Column::make('created_at')->title('FECHA DE CREACION'),
+            //Column::make('updated_at')->title('FECHA DE MODIFICACION'),
         ];
     }
 

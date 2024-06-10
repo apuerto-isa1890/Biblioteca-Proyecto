@@ -31,7 +31,8 @@ class RecursosDataTable extends DataTable
      */
     public function query(Recurso $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+                     ->select('id', 'titulo', 'descripcion', 'anyo', 'inventario', 'tipo');
     }
 
     /**
@@ -67,10 +68,10 @@ class RecursosDataTable extends DataTable
             Column::make('descripcion')->title('DESCRIPCION'),
             Column::make('anyo')->title('AÑO'),
             Column::make('inventario')->title('inventario'),
-            Column::make('isb')->title('ISB'),
+           // Column::make('isb')->title('ISB'),
             Column::make('tipo')->title('TIPO'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            //Column::make('created_at'),
+            //Column::make('updated_at'),
         ];
     }
 

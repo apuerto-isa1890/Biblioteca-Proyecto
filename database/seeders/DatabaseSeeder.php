@@ -43,6 +43,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin'),
         ]);
 
+        $user_bibliotecario = User::create([
+            'name' => 'bibliotecario',
+            'email' => 'biblotecario@localhost.com',
+            'password' => bcrypt('bibliotecario'),
+        ]);
 
         Recurso::create([
                 'titulo' => 'El principito',
