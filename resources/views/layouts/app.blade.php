@@ -104,7 +104,7 @@
                         </a>
                         <a href="{{ route('prestamo.index') }}" class="list-group-item list-group-item-action p-4 p-4" id="administrar prestamo">
                             <span>
-                                <h5 class="fw-bold">Adminstracion de prestamos</h5>
+                                <h5 class="fw-bold">Prestamos</h5>
                             </span>
                         </a>
                         <a href="{{ route('recurso.index') }}" class="list-group-item list-group-item-action p-4" id="administrar recursos">
@@ -124,7 +124,7 @@
                         </a>
                         <a href="{{ route('author.index') }}" class="list-group-item list-group-item-action p-4" id="administrar author">
                             <span>
-                                <h5 class="fw-bold">Authores</h5>
+                                <h5 class="fw-bold">Autores</h5>
                             </span>
                         </a>
                         <a href="{{ route('usuario.index') }}" class="list-group-item list-group-item-action p-4" id="administrar usuario-menu">
@@ -143,7 +143,7 @@
                         <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action p-4" id="administrar admin-permisos">
                             <span>
                                 <h5 class="fw-bold">
-                                    Administracion de permisos de usuario
+                                    Permisos de Usuario
                                 </h5>
                             </span>
                         </a>

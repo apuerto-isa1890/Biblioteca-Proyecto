@@ -80,14 +80,14 @@ class PrestamosDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->title('ID'),
-            Column::make('usuario')->title('USUARIO'),
-            Column::make('tipo')->title('TIPO'),        
-            Column::make('titulo')->title('RECURSO'),   
-            Column::make('estado')->title('ESTADO'),       
-            Column::make('fecha_hora_prestamo')->title('FECHA HORA PRESTAMO'),     
-            Column::make('fecha_hora_entrega')->title('FECHA HORA ENTREGA'),     
-            Column::make('fecha_hora_devolucion')->title('FECHA HORA DEVOLUCION'),     
+            Column::make('id')->title('Id'),
+            Column::make('usuario')->title('Usuario'),
+            Column::make('tipo')->title('Tipo'),        
+            Column::make('titulo')->title('Recurso'),   
+            Column::make('estado')->title('Estado'),       
+            Column::make('fecha_hora_prestamo')->title('Fecha del prestamo'),     
+            Column::make('fecha_hora_entrega')->title('Fecha de entrega'),     
+            Column::make('fecha_hora_devolucion')->title('Fecha de devolución'),     
            
         ];
     }

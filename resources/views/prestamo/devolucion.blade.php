@@ -11,7 +11,7 @@
             </div>
 
           <div class="modal-body">
-               <h3>Seguro que deseas confirmar la devolucion </h3>   
+               <h3>¿Seguro que deseas confirmar la devolución? </h3>   
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="crearCategoriaLabel">
-                  Nuevo recurso/libro.
+                  Nuevo Libro/Recurso
               </h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -15,7 +15,7 @@
                       <input type="text" class="form-control" id="recurso-titulo" name="titulo" required>
                   </div>
                   <div class="mb-3">
-                      <label for="recurso-descripcion" class="form-label">Descripcion <span class="text-danger">*</span></label>
+                      <label for="recurso-descripcion" class="form-label">Descripción <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="recurso-descripcion" name="descripcion" required>
                   </div>
                   <div class="row">
@@ -36,12 +36,12 @@
                             <label for="recurso-tipo" class="form-label">Tipo <span class="text-danger">*</span></label>
                             <select class="form-control" name="tipo" id="recurso-tipo">
                                 <option value="CCNN">CCNN</option>
-                                <option value="LITERATURA">LITERATURA</option>
-                                <option value="HISTORIA">HISTORIA</option>
-                                <option value="MATEMATICAS">MATEMATICAS</option>
-                                <option value="GEOGRAFIA">GEOGRAFIA</option>
-                                <option value="RELIGION">RELIGION</option>
-                                <option value="LENGUA EXTRANGERA">LENGUA EXTRANJERA</option>
+                                <option value="LITERATURA">Literatura</option>
+                                <option value="HISTORIA">Historia</option>
+                                <option value="MATEMATICAS">Matemáticas</option>
+                                <option value="GEOGRAFIA">Geografia</option>
+                                <option value="RELIGION">Religión</option>
+                                <option value="LENGUA EXTRANGERA">Lengua Extranjera</option>
                             </select>
                         </div>
                     </div>

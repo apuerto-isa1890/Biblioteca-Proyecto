@@ -12,12 +12,12 @@
                 Buscar
             </button>
             <div class="form-group ">
-                <label for="">Fecha fin</label>
+                <label for="">Fecha de fin</label>
                 <input type="date" name="" id="fin" class="form-control rounded-0">
                
             </div>
             <div class="form-group">
-                <label for="">Fecha inicio</label>
+                <label for="">Fecha de inicio</label>
                 <input type="date" name="" id="inicio" class="form-control rounded-0">
             </div>
      
@@ -31,9 +31,9 @@
           <tr>
             <th scope="col">Libro</th>
             <th scope="col">Usuario</th>
-            <th scope="col">Fecha prestamo</th>
-            <th scope="col">Fecha entrega</th>
-            <th scope="col">Dias retraso</th>
+            <th scope="col">Fecha de prestamo</th>
+            <th scope="col">Fecha de entrega</th>
+            <th scope="col">Dias de retraso</th>
           </tr>
         </thead>
         <tbody id="t-prestamo-d">
