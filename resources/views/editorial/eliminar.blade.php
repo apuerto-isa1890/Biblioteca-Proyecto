@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
               <h1 class="fs-5" id="crearCategoriaLabel">
-                  Inactivar editorial.
+                  Desactivar editorial.
               </h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>

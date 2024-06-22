@@ -33,7 +33,7 @@
             <th scope="col">Usuario</th>
             <th scope="col">Fecha de prestamo</th>
             <th scope="col">Fecha de entrega</th>
-            <th scope="col">Dias de retraso</th>
+            <th scope="col">Días de retraso</th>
           </tr>
         </thead>
         <tbody id="t-prestamo-d">

@@ -18,7 +18,7 @@
               <tr>
                 <th scope="col">Usuario</th>
                 <th scope="col">N° Libros prestado</th>
-                <th scope="col">Accion</th>
+                <th scope="col">Acción</th>
                
               </tr>
             </thead>
