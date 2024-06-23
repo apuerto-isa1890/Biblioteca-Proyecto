@@ -64,13 +64,13 @@ class RecursosDataTable extends DataTable
     {
         return [
             Column::make('id'),
-            Column::make('titulo')->title('TITULO'),
-            Column::make('descripcion')->title('DESCRIPCION'),
-            Column::make('anyo')->title('AÑO'),
-            Column::make('inventario')->title('inventario'),
+            Column::make('titulo')->title('Titulo'),
+            Column::make('descripcion')->title('Descripción'),
+            Column::make('anyo')->title('Año'),
+            Column::make('inventario')->title('Inventario'),
            // Column::make('isb')->title('ISB'),
-            Column::make('tipo')->title('TIPO'),
-            //Column::make('created_at'),
+            Column::make('tipo')->title('Tipo'),
+            //Column::make('created_at'),       
             //Column::make('updated_at'),
         ];
     }

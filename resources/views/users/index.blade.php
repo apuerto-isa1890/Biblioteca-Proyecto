@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">Adminstracion de usuarios y permisos<div>
+        <div class="card-header">Adminstración de permiso de usuarios<div>
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                         <button type="button" class="btn btn-danger m-2" onclick="permisos()" data-bs-toggle="modal" data-bs-target="#administrarPermisos">Administrar permisos</button>

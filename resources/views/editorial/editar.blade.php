@@ -16,7 +16,7 @@
                       <input type="text" class="form-control" id="editorial-nombre" name="nombre" required>
                   </div>
                   <div class="mb-3">
-                      <label for="descripcion-telefono" class="form-label">Telefono <span class="text-danger">*</span></label>
+                      <label for="descripcion-telefono" class="form-label">Teléfono <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="editorial-telefono" name="telefono" required>
                   </div>
                   <div class="mb-3">

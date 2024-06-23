@@ -63,12 +63,12 @@ class AuthorsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->title('ID'),
-            Column::make('nombres')->title('NOMBRES'),
-            Column::make('apellidos')->title('APELLIDOS'),
-            Column::make('sexo')->title('SEXO'),
-            Column::make('pais')->title('PAIS'),
-            Column::make('estado')->title('ESTADO'),
+            Column::make('id')->title('Id'),
+            Column::make('nombres')->title('Nombres'),
+            Column::make('apellidos')->title('Apellidos'),
+            Column::make('sexo')->title('Sexo'),
+            Column::make('pais')->title('Pais'),
+            Column::make('estado')->title('Estado'),
             //Column::make('created_at')->title('FECHA DE CREACION'),
             //Column::make('updated_at')->title('FECHA DE MODIFICACION'),
         ];

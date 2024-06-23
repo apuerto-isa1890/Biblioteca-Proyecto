@@ -6,7 +6,7 @@
         <div class="col">
           <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
             <div class="card-header bg-white">
-                <h4 class="fw-bold text-center">Total libros inventario</h4>
+                <h4 class="fw-bold text-center">Libros en Inventario</h4>
             </div>
             <div class="card-body text-center">
                 <h1 class="fw-bold">{{ $data['libros']}}</h1>
@@ -17,7 +17,7 @@
         <div class="col">
             <div class="card h-100 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
               <div class="card-header bg-white">
-                  <h4 class="fw-bold text-center">Total libros prestados</h4>
+                  <h4 class="fw-bold text-center">Libros prestados</h4>
               </div>
               <div class="card-body text-center">
                   <h1 class="fw-bold">{{ $data['prestamos']}}</h1>
@@ -50,14 +50,14 @@
         <nav>
             <div class="nav nav-tabs mt-4" id="nav-tab" role="tablist">
               <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                <h5 class="fw-bold">Reportes prestamos</h5>
+                <h5 class="fw-bold">Reporte de prestamos</h5>
               </button>
               <!--
               <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
                 <h5 class="fw-bold">Reportes libros</h5>
               </button> -->
               <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                <h5 class="fw-bold">Reportes usuarios</h5>
+                <h5 class="fw-bold">Reportes de usuarios</h5>
               </button>
             
             </div>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">Administracion de usuarios<div>
+        <div class="card-header">Administración de usuarios<div>
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                         <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#crearEditorial"> Agregar</button>

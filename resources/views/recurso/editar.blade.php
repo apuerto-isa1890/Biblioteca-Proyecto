@@ -37,8 +37,8 @@
                             <label for="recursos-tipo" class="form-label">Tipo <span class="text-danger">*</span></label>
                             <select class="form-control" name="tipo" id="recursos-tipo">
                                 <option value="CCNN">CCNN</option>
-                                <option value="LITERATURA">LITERATURA</option>
-                                <option value="HISTORIA">HISTORIA</option>
+                                <option value="LITERATURA">Literatura</option>
+                                <option value="HISTORIA">Historia</option>
                             </select>
                         </div>
                     </div>

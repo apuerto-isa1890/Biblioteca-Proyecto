@@ -64,11 +64,11 @@ class EditorialsDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::make('id')->title('ID'),
-            Column::make('nombre')->title('NOMBRE'),
-            Column::make('telefono')->title('TELEFONO'),
-            Column::make('direccion')->title('DIRECCION'),
-            Column::make('estatus')->title('ESTADO'),
+            Column::make('id')->title('Id'),
+            Column::make('nombre')->title('Nombre'),
+            Column::make('telefono')->title('Teléfono'),
+            Column::make('direccion')->title('Dirección'),
+            Column::make('estatus')->title('Estado'),
             //Column::make('created_at')->title('FECHA CREACION'),
             //Column::make('updated_at')->title('FECHA ACTUALIZACION'),
         ];
