@@ -1,5 +1,5 @@
 
-<label for="recurso">Selecciona un author:</label>
+<label for="recurso">Selecciona un Autor:</label>
 <select id="recurso-author" name="author_id" class="form-control"></select>
 
 <script>

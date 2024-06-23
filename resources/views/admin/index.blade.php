@@ -6,7 +6,7 @@
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                <h5 class="fw-bold">Adminstracion de bases de datos</h5>
+                <h5 class="fw-bold">Adminstración de bases de datos</h5>
               </button>
              
             </div>

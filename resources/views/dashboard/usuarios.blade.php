@@ -17,8 +17,8 @@
             <thead class="table-primary">
               <tr>
                 <th scope="col">Usuario</th>
-                <th scope="col">No Libros prestado</th>
-                <th scope="col">Accion</th>
+                <th scope="col">N° Libros prestado</th>
+                <th scope="col">Acción</th>
                
               </tr>
             </thead>
@@ -33,7 +33,7 @@
               <tr>
                 <th scope="col">Titulo</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Fecha prestado</th>             
+                <th scope="col">Fecha de prestamo</th>             
               </tr>
             </thead>
             <tbody id="t-usuario-libro-d">

@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="crearCategoriaLabel">
-                  Nuevo usuario.
+                  Nuevo usuario
               </h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -19,7 +19,7 @@
                       <input type="text" class="form-control" id="estudiante-apellidos" name="apellidos" required>
                   </div>
                   <div class="mb-3">
-                    <label for="estudiante-identificacion" class="form-label">Identificacion <span class="text-danger">*</span></label>
+                    <label for="estudiante-identificacion" class="form-label">IdentificaciÓn <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="estudiante-identificacion" name="identificacion" required>
                 </div>
                   <div class="mb-3">

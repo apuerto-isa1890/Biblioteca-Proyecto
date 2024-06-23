@@ -63,12 +63,12 @@ class UsuariosDataTable extends DataTable
     {
         return [
             Column::make('id'),
-            Column::make('nombres')->title('NOMBRES'),
-            Column::make('apellidos')->title('APELLIDOS'),
-            Column::make('identificacion')->title('IDENTIFICACION'),
-            Column::make('tipo')->title('TIPO'),
-            Column::make('fecha_nac')->title('FECHA NACIMIENTO'),
-            Column::make('sexo')->title('SEXO'),
+            Column::make('nombres')->title('Nombre'),
+            Column::make('apellidos')->title('Apellidos'),
+            Column::make('identificacion')->title('Identificación'),
+            Column::make('tipo')->title('Tipo'),
+            Column::make('fecha_nac')->title('Fecha de nacimiento'),
+            Column::make('sexo')->title('Sexo'),
             //Column::make('created_at')->title('FECHA CREACION'),
             //Column::make('updated_at')->title('FECHA MODIFICACION'),
         ];

@@ -5,7 +5,7 @@
         <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="crearCategoriaLabel">
-                  Editar categoria.
+                  Editar categoria
               </h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -16,7 +16,7 @@
                       <input type="text" class="form-control" id="nombre-categoria-editar" name="name">
                   </div>
                   <div class="mb-3">
-                      <label for="descripcion-categoria" class="form-label">Descripcion <span class="text-danger">*</span></label>
+                      <label for="descripcion-categoria" class="form-label">Descripción <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="descripcion-categoria-editar" name="description">
                   </div>
               

@@ -3,12 +3,12 @@
 @section('content')
 <div class="container-fluid">
     <div class="card">
-        <div class="card-header">Adminstracion de prestamo<div>
+        <div class="card-header">Adminstración de prestamos<div>
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                        
                         <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#crearEditorial"> Agregar</button>
-                        <button type="button" class="btn btn-warning m-2" onclick="editar()" data-bs-toggle="modal" data-bs-target="#editarEditorial">Devolucion de prestamo</button>
+                        <button type="button" class="btn btn-warning m-2" onclick="editar()" data-bs-toggle="modal" data-bs-target="#editarEditorial">Devolución de prestamo</button>
                        
                        <!-- <button type="button" class="btn btn-danger  m-2" onclick="eliminar()" data-bs-toggle="modal" data-bs-target="#eliminarEditorial">Anular/Activar</button> -->
 
