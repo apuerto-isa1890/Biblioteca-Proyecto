@@ -95,7 +95,7 @@ class PrestamoController extends Controller
 
         $recurso = Recurso::find($prestamo->recurso_id);
  
-        $recurso->inventario = $prestamo->inventario  + 1;
+        $recurso->inventario = $recurso->inventario  + 1;
         $recurso->save();
         return Redirect::back();
     }
