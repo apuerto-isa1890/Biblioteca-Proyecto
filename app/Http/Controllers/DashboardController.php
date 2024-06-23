@@ -34,6 +34,7 @@ class DashboardController extends Controller
         $query ->join('usuarios', 'usuarios.id', '=', 'prestamos.usuario_id')
         ->join('recursos', 'recursos.id', '=', 'prestamos.recurso_id')
         ->whereBetween('fecha_hora_prestamo', [$fecha_inicio, $fecha_fin])
+        ->where('fecha_hora_devolucion', '=', null)
         ->select('prestamos.id',
                  'usuarios.nombres as usuario',
                  'recursos.tipo',
@@ -56,6 +57,7 @@ class DashboardController extends Controller
         $query ->join('usuarios', 'usuarios.id', '=', 'prestamos.usuario_id')
         ->join('recursos', 'recursos.id', '=', 'prestamos.recurso_id')
         ->where('fecha_hora_entrega', '<',  Carbon::now())
+        ->where('fecha_hora_devolucion', '=', null)
         ->select('prestamos.id',
                  'usuarios.nombres as usuario',
                  'recursos.tipo',
